@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(301, 75);
+            this.label1.Location = new System.Drawing.Point(309, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 33);
             this.label1.TabIndex = 0;
@@ -71,30 +71,31 @@
             // loginTxt
             // 
             this.loginTxt.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginTxt.Location = new System.Drawing.Point(234, 150);
-            this.loginTxt.Multiline = true;
+            this.loginTxt.Location = new System.Drawing.Point(243, 150);
             this.loginTxt.Name = "loginTxt";
-            this.loginTxt.Size = new System.Drawing.Size(298, 45);
+            this.loginTxt.Size = new System.Drawing.Size(298, 27);
             this.loginTxt.TabIndex = 3;
             // 
             // passwordTxt
             // 
             this.passwordTxt.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordTxt.Location = new System.Drawing.Point(234, 243);
+            this.passwordTxt.Location = new System.Drawing.Point(243, 243);
             this.passwordTxt.Multiline = true;
             this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(298, 45);
             this.passwordTxt.TabIndex = 4;
             // 
             // loginBtn
             // 
+            this.loginBtn.BackColor = System.Drawing.Color.Transparent;
             this.loginBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginBtn.Location = new System.Drawing.Point(307, 318);
+            this.loginBtn.Location = new System.Drawing.Point(312, 318);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(161, 58);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Войти в аккаунт";
-            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // pictureBox1
@@ -111,11 +112,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(785, 476);
+            this.Controls.Add(this.loginTxt);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.passwordTxt);
-            this.Controls.Add(this.loginTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

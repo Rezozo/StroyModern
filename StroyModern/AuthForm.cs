@@ -1,12 +1,5 @@
 ﻿using StroyModern.provider;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StroyModern
@@ -32,9 +25,9 @@ namespace StroyModern
             {
                 MessageBox.Show("Укажите пароль и логин");
                 return;
-            } 
-
-            if (!userProvider.isValidUser(login, password))
+            }
+            string role = userProvider.isValidUser(login, password);
+            if (role.Equals(""))
             {
                 if (CountOfAttepts == 1)
                 {
@@ -63,7 +56,8 @@ namespace StroyModern
             Hide();
             ProductForm productForm = new ProductForm();
             productForm.LoginLabel = login;
-            productForm.FormClosed -= (s, args) => Close();
+            productForm.UserRole = role;
+            productForm.FormClosed += (s, args) => Close();
             productForm.Show();
         }
     }
