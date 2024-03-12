@@ -82,7 +82,7 @@ namespace StroyModern
                     message.Body = "Уважаемый клиент! Только 24 февраля вся продукция со скидкой – 20%, при указании кодового слова «Дэмоэкзамен 2024».";
 
                     SmtpClient smtpClient = new SmtpClient("smtp.yandex.ru", 587);
-                    smtpClient.Credentials = new NetworkCredential("aleks.ivka@yandex.ru", "47w1va"); // TODO потом удалить
+                    smtpClient.Credentials = new NetworkCredential("aleks.ivka@yandex.ru", "123"); 
                     smtpClient.EnableSsl = true;
 
                     try
